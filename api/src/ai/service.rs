@@ -1,3 +1,4 @@
+use nest_struct::nest_struct;
 use serde::Deserialize;
 use std::sync::Arc;
 
@@ -15,19 +16,10 @@ pub struct PostToSuggestTagsFor {
   description: String,
 }
 
-#[derive(Deserialize)]
-pub struct AIResponseChoiceMessage {
-  content: String,
-}
-
-#[derive(Deserialize)]
-pub struct AIResponseChoice {
-  message: AIResponseChoiceMessage,
-}
-
+#[nest_struct]
 #[derive(Deserialize)]
 pub struct AIResponse {
-  choices: Vec<AIResponseChoice>,
+  choices: Vec<nest! { message: nest!{ content: String } }>,
 }
 
 pub struct AIService {
