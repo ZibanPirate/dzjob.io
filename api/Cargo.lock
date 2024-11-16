@@ -2025,9 +2025,9 @@ dependencies = [
 
 [[package]]
 name = "nest_struct"
-version = "0.1.4"
+version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cde8aa1dd06a351d554ea30c2c477e4b429a6f0b34b5bcccfaf283e310da1dd4"
+checksum = "100eaefb6d7ab99f0c6134feab3e369aefa937d266db965852662ca2a9e28eed"
 dependencies = [
  "convert_case",
  "proc-macro2",
